@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Fornecedor | Direcional Engenharia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --direcional-blue: #0046ad;
+            --direcional-blue-dark: #003380;
+            --direcional-red: #ff0000;
+            --direcional-red-hover: #cc0000;
+        }
+
+        body {
+            background-color: #f8fafc;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .bg-direcional-blue { background-color: var(--direcional-blue); }
+        .bg-direcional-blue-dark { background-color: var(--direcional-blue-dark); }
+        .bg-direcional-red { background-color: var(--direcional-red); }
+        .bg-direcional-red-hover:hover { background-color: var(--direcional-red-hover); }
+        .text-direcional-blue { color: var(--direcional-blue); }
+        .text-direcional-red { color: var(--direcional-red); }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .logo-symbol {
+            width: 24px;
+            height: 24px;
+            background-color: var(--direcional-blue);
+            border-radius: 50% 50% 0 50%;
+            position: relative;
+            display: inline-block;
+        }
+        .logo-symbol::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background-color: var(--direcional-red);
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                <a href="https://www.direcional.com.br/" target="_blank" class="logo-container">
+                    <div class="logo-symbol"></div>
+                    <span class="text-2xl font-black tracking-tighter text-direcional-blue uppercase">
+                        Direcional <span class<channel|>font-light text-slate-500">Engenharia</span>
+                    </span>
+                </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#sobre" class="hover:text-direcional-blue transition-colors">Sobre o App</a>
+                <a href="#beneficios" class="hover:text-direcional-blue transition-colors">Benefícios</a>
+                <a href="#suporte" class="hover:text-direcional-blue transition-colors">Suporte</a>
+            </nav>
+            <a href="#download" class="bg-direcional-blue text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-direcional-blue-dark transition-all shadow-sm">
+                Baixar App
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-direcional-blue text-white py-16 lg:py-24">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-20 hidden lg:block"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider">
+                        <i data-lucide="shield-check" class="w-3 h-3"></i> Portal Oficial de Credenciamento
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight">
+                        Gestão de Fornecedores <br>
+                        <span class="text-blue-300">na palma da sua mão.</span>
+                    </h1>
+                    <p class="text-lg text-blue-100 max-w-xl leading-relaxed">
+                        Otimize sua parceria com a Direcional Engenharia. Acesse editais, envie documentações, acompanhe medições e gerencie seus pagamentos de forma digital e segura.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#download" class="bg-direcional-red text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-direcional-red-hover transition-all shadow-lg flex items-center justify-center gap-2 group">
+                            <i data-lucide="download" class="w-5 h-5 group-hover:animate-bounce"></i>
+                            Baixar Aplicativo
+                        </a>
+                        <a href="#sobre" class="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-center hover:bg-white/20 transition-all">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative mx-auto w-64 h-[500px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-800 shadow-2xl overflow-hidden">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-800 rounded-b-xl z-20"></div>
+                        <div class="h-full overflow-y-auto snap-y snap-mandatory scrollbar-hide">
+                            <div class="snap-start h-full w-full bg-[#0a192f] flex flex-col items-center justify-center p-6 text-center">
+                                <span class="text-[10px] border border-blue-400 text-blue-400 px-2 py-1 rounded-full mb-4">OPORTUNIDADES DE PARCERIA</span>
+                                <h2 class="text-white text-lg font-bold leading-tight mb-4">Sua empresa pode fazer parte da <span class="text-blue-500">nossa rede de fornecedores.</span></h2>
+                                <button class="bg-blue-600 text-white text-[10px] font-bold py-2 px-4 rounded-lg w-full">CADASTRAR MINHA EMPRESA</button>
+                            </div>
+                            <div class="snap-start h-full w-full bg-[#0a192f] p-4 pt-10 overflow-y-auto">
+                                <h3 class="text-white text-sm font-bold mb-4">Cadastro de Fornecedores</h3>
+                                <div class="space-y-3">
+                                    <div class="h-8 w-full bg-slate-800 rounded border border-slate-700"></div>
+                                    <div class="h-8 w-full bg-slate-800 rounded border border-slate-700"></div>
+                                    <div class="h-8 w-full bg-slate-800 rounded border border-slate-700"></div>
+                                    <div class="h-8 w-full bg-slate-800 rounded border border-slate-700"></div>
+                                    <div class="h-20 w-full bg-slate-800 rounded border border-slate-700"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl text-slate-800 hidden sm:block animate-bounce">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-green-100 p-2 rounded-full text-green-600">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold uppercase opacity-50">Status</p>
+                                <p class="text-sm font-bold">App Verificado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-direcional-blue mb-4">Tudo o que você precisa para operar</h2>
+                <p class="text-slate-600">Eliminamos a burocracia física. Agora, todo o fluxo de fornecimento é integrado em uma única plataforma mobile.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-direcional-blue transition-all group">
+                    <div class="w-12 h-12 bg-direcional-blue text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Documentação Digital</h3>
+                    <p class="text-slate-600 leading-relaxed">Envie certidões, contratos e notas fiscais diretamente pelo app. Sem necessidade de deslocamentos.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-direcional-blue transition-all group">
+                    <div class="w-12 h-12 bg-direcional-blue text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Acompanhamento de Obras</h3>
+                    <p class="text-slate-600 leading-relaxed">Visualize em tempo real o status de suas entregas e a evolução das medições em cada empreendimento.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:border-direcional-blue transition-all group">
+                    <div class="w-12 h-12 bg-direcional-blue text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Gestão Financeira</h3>
+                    <p class="text-slate-600 leading-relaxed">Consulte datas de pagamento, extratos de faturamento e resolva pendências financeiras rapidamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="py-20 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white p-8 md:p-16 rounded-[3rem] shadow-2xl border border-slate-200 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-direcional-red"></div>
+                
+                <h2 class="text-3xl md:text-4xl font-extrabold text-direcional-blue mb-6">Pronto para começar?</h2>
+                <p class="text-slate-600 mb-10 text-lg">Baixe a versão mais recente do aplicativo para Android e iOS e integre sua empresa ao ecossistema Direcional.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <button onclick="handleDownload('Android')" class="flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all w-full sm:w-auto">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                        <div class="text-left">
+                            <p class="text-[10px] uppercase opacity-60 leading-none">Disponível para</p>
+                            <p class="text-lg leading-tight">Android APK</p>
+                        </div>
+                    </button>
+                     <button class="flex items-center justify-center gap-3 bg-slate-400 text-slate-200 px-8 py-4 rounded-2xl font-bold cursor-not-allowed w-full sm:w-auto opacity-60">
+                         <i data-lucide="apple" class="w-6 h-6"></i>
+                         <div class="text-left">
+                             <p class="text-[10px] uppercase opacity-60 leading-none">Indisponível para</p>
+                             <p class="text-lg leading-tight">iOS App Store</p>
+                         </div>
+                     </button>
+                </div>
+                
+                <p class="mt-8 text-sm text-slate-400 flex items-center justify-center gap-2">
+                    <i data-lucide="lock" class="w-3 h-3"></i> Conexão criptografada e segura
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-direcional-blue-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-direcional-blue font-bold">D</div>
+                        <span class="text-lg font-bold">DIRECIONAL</span>
+                    </div>
+                    <p class="text-blue-200 text-sm leading-relaxed">
+                        Líder no setor de construção civil, comprometida com a inovação e a eficiência em todas as etapas da obra.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Links Rápidos</h4>
+                    <ul class="text-sm text-blue-200 space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Política de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Termos de Uso do App</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contato</h4>
+                    <ul class="text-sm text-blue-200 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> fornecedores@direcional.com.br</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> 0800 000 0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-blue-300">
+                &copy; 2026 Direcional Engenharia do Brasil. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function handleDownload(platform) {
+            const btn = event.currentTarget;
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> Iniciando...`;
+            lucide.createIcons();
+            setTimeout(() => {
+                    window.location.href = 'DIRECIONAL ADM (2).apk';
+                    btn.innerHTML = originalContent;
+                lucide.createIcons();
+            }, 1500);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
