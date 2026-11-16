@@ -185,7 +185,15 @@
             btn.innerHTML = `<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> Iniciando...`;
             lucide.createIcons();
             setTimeout(() => {
-                        window.location.href = 'https://cdn.direcional.com.br/downloads/portal-fornecedor.apk'; // Link simulado de download do APK
+const blob = new Blob(['Simulated APK Content'], { type: 'application/vnd.android.package-archive' });
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'portal-fornecedor.apk';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
                 btn.innerHTML = originalContent;
                 lucide.createIcons();
             }, 1500);
